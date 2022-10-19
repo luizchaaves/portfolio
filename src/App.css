@@ -1,38 +1,218 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root{
+  --header-height: 3rem;
+
+  /*============== FONT AND TYPOGRAPHY =============*/
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 3rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.5rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+
+  /*================= FONT WEIGHT ==================*/
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*=================== MARGINS ====================*/
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*=================== Z-INDEX ====================*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dark-theme{
+  /*==================== COLORS ====================*/
+  --background-light: #17293A;
+  --background: #0F1B26;
+  --background-dark: #0C151D;
+
+  --detail-light:	#DA2F46;
+  --detail:	#D7263D;
+  --detail-dark: #D0253C;
+  --detail-gradient: linear-gradient(90deg, hsla(208, 41%, 8%, 1) 0%, hsla(352, 70%, 52%, 1) 45%, hsla(352, 70%, 50%, 1) 75%, hsla(352, 70%, 48%, 1) 100%);
+  --detail-gradient-reverse: linear-gradient(90deg, hsla(352, 70%, 48%, 1)  0%, hsla(352, 70%, 50%, 1) 45%, hsla(352, 70%, 52%, 1) 75%, hsla(208, 41%, 8%, 1) 100%);
+
+  --detail-secondary-light:	#0087E0;
+  --detail-secondary:	#0075C4;
+  --detail-secondary-dark: #006EB8;
+  --detail-secondary-gradient: linear-gradient(90deg, hsla(208, 41%, 8%, 1) 0%, hsla(204, 100%, 44%, 1) 45%, hsla(204, 100%, 38%, 1) 75%, hsla(204, 100%, 36%, 1) 100%);
+
+  --color-primary: #C4C4C4;
+  --color-secondary: #E6E6E6;
+
+  /* --box-shadow: #0C151D; */
+  --box-shadow: #060A0E;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.light-theme{
+  /*==================== COLORS ====================*/
+  --background-light:		#F5F5F5;
+  --background:			#E2E2E2;
+  --background-dark:		#ADADAD;
+
+  --detail-light: #F5AD29;
+  --detail: #EFA00B;
+  --detail-dark: #EA9C0B;
+  --detail-gradient: linear-gradient(90deg, hsla(0, 0%, 88%, 1) 0%, hsla(39, 91%, 56%, 1) 45%, hsla(39, 91%, 49%, 1) 75%, hsla(39, 91%, 48%, 1) 100%);
+  --detail-gradient-reverse: linear-gradient(90deg, hsla(39, 91%, 48%, 1) 0%, hsla(39, 91%, 49%, 1)  45%,  hsla(39, 91%, 56%, 1) 75%,  hsla(0, 0%, 88%, 1) 100%);
+
+  --detail-secondary-light: #0087E0;
+  --detail-secondary:	#0075C4;
+  --detail-secondary-dark: #006EB8;
+  --detail-secondary-gradient: linear-gradient(90deg, hsla(0, 0%, 88%, 1) 0%, hsla(204, 100%, 44%, 1) 45%, hsla(204, 100%, 38%, 1) 75%, hsla(204, 100%, 36%, 1) 100%);
+
+  --color-primary: #383838;
+  --color-secondary: #858585;
+
+  --box-shadow: #858585;
+}
+
+/*============= RESPONSIVE TYPOGRAPHY  ===========*/
+@media (max-width: 992px) {
+  :root{
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: var(--background);
+  color: var(--color-primary);
+  transition: 0.2s linear;
+}
+
+h1, h2, h3{
+  font-weight: var(--font-semi-bold);
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+body,
+button,
+input,
+textarea{
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+.container{
+  max-width: 992px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section{
+  height: auto;
+  min-height: calc(100vh - var(--header-height));
+  display: grid;
+  align-self: center;
+  padding: 6rem 0;
+}
+
+.grid{
+  display: grid;
+  gap: 1.5rem;
+}
+
+.divider-normal{
+  height: 1px;
+  background: var(--detail-gradient);
+}
+
+.divider-reverse{
+  height: 1px;
+  background: var(--detail-gradient-reverse);
+}
+
+.button{
+  background: var(--background-light);
+  color: var(--color-primary);
+  padding: 1rem 2rem;
+  border-radius: .8rem;
+  font-weight: var(--font-medium);
+  border: 1px solid transparent;
+  transition: .3s;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover{
+  border-color: var(--detail-light);
+  color: var(--detail-light);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.button > svg{
+  margin-left: var(--mb-0-25);
+}
+
+/*================== BREAKPOINTS =================*/
+/* large device */
+@media (max-width: 992px) {
+  .container{
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* medium device */
+@media (max-width: 768px) {
+}
+
+@media (max-width: 576px) {
+}
+
+/* small device */
+@media (max-width: 350px) {
+  .container{
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+
+  .section{
+    height: calc(120vh - var(--header-height));
   }
 }

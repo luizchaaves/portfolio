@@ -1,0 +1,27 @@
+.home__social{
+  display: grid;
+  grid-template-columns: max-content;
+  row-gap: 1rem;
+  justify-self: start;
+}
+
+.home__social-icon{
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: .5rem;
+}
+
+.home__social-link:hover{
+  color: var(--detail-light);
+  transition: .3s;
+}
+
+@media (max-width: 768px) {
+  .home__social{
+    order: 1;
+    display: flex;
+  justify-self: center;
+
+  }
+}
