@@ -98,6 +98,7 @@ const Contact = () => {
                   name="name"
                   id="name"
                   className="contact__form-input"
+                  required
                 />
               </div>
               <div className="contact__form-div">
@@ -109,6 +110,7 @@ const Contact = () => {
                   name="email"
                   id="email"
                   className="contact__form-input"
+                  required
                 />
               </div>
               <div className="contact__form-div contact__form-area">
@@ -121,6 +123,7 @@ const Contact = () => {
                   cols="30"
                   rows="10"
                   className="contact__form-input "
+                  required
                 ></textarea>
               </div>
               {loading ? (

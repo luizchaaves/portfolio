@@ -1,7 +1,7 @@
 import React from 'react';
-import PhotoProfile from '../../Assets/teste.png';
 import { AiOutlineDownload } from 'react-icons/ai';
-import CV from '../../Assets/Luiz Otavio Chaves Carvalho - Curriculo.pdf';
+import CV from '../../Assets/about/Luiz Otavio Chaves Carvalho - Curriculo.pdf';
+import { ReactComponent as ImageLogo } from '../../Assets/about/photo-logo-secundary.svg';
 import './about.css';
 
 const About = () => {
@@ -10,7 +10,8 @@ const About = () => {
       <div className="about__container container">
         <div className="about__content grid">
           <div className="about__image">
-            <img src={PhotoProfile} alt="" />
+            {/* <img src={PhotoProfile} alt="" /> */}
+            <ImageLogo />
           </div>
           <div className="about__info">
             <h2 className="about__title">Sobre</h2>

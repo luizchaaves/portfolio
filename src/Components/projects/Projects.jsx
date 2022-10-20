@@ -4,8 +4,8 @@ import { SiCss3 } from 'react-icons/si';
 import { SiJavascript } from 'react-icons/si';
 import { SiReact } from 'react-icons/si';
 import { AiOutlineArrowRight } from 'react-icons/ai';
-import Dogs from '../../Assets/dogs.png';
-import Animais from '../../Assets/animais-fantasticos.png';
+import Dogs from '../../Assets/projects/dogs.png';
+import Animais from '../../Assets/projects/animais-fantasticos.png';
 import './projects.css';
 
 const Projects = () => {

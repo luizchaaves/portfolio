@@ -15,11 +15,12 @@
 .about__image{
   justify-self: self-start;
   align-self: center;
-  transform: rotateZ(-15deg);
   opacity: 0.2;
-  height: 300px;
+  filter: drop-shadow(2px 2px 2px var(--detail-dark));
+}
+
+.about__image svg{
   width: 300px;
-  filter: drop-shadow(2px 15px 6px var(--detail-dark));
 }
 
 .about__info{
