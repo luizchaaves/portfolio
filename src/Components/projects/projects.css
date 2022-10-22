@@ -1,5 +1,6 @@
 .projects__container{
   width: -webkit-fill-available;
+  width: -moz-available;
 }
 
 .projects__container-title{

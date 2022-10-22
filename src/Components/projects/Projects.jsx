@@ -35,48 +35,46 @@ const Projects = () => {
   return (
     <section className="section section__projects" id="projects">
       <div className="projects__container container">
-        <div className="teste">
-          <div className="projects__container-title">
-            <h2 className="projects__title">Projetos</h2>
-          </div>
+        <div className="projects__container-title">
+          <h2 className="projects__title">Projetos</h2>
+        </div>
 
-          <div className="projects__content">
-            {projects.map((project) => (
-              <div
-                key={project.id}
-                className="project__card"
-                onMouseOver={() => setProjectShowDetail(project.id)}
-                onMouseOut={() => setProjectShowDetail(null)}
-              >
-                <div className="project__img">
-                  <img src={project.img} alt="" />
-                </div>
-                <div className="project__info">
-                  <span>{project.name}</span>
-                  <div className="project__skills">
-                    {project.languages.map((language, index) => (
-                      <div key={index}>{language}</div>
-                    ))}
-                  </div>
-                </div>
-                <div
-                  className={`project__description ${
-                    projectShowDetail === project.id && 'showDetail'
-                  }`}
-                >
-                  <div className="project__description-text">
-                    <h4>{project.name}</h4>
-                    <p>{project.details}</p>
-                  </div>
-                  <div className="project__description-link">
-                    <a href={project.repo}>
-                      Visualizar repositório <AiOutlineArrowRight />
-                    </a>
-                  </div>
+        <div className="projects__content">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="project__card"
+              onMouseOver={() => setProjectShowDetail(project.id)}
+              onMouseOut={() => setProjectShowDetail(null)}
+            >
+              <div className="project__img">
+                <img src={project.img} alt="" />
+              </div>
+              <div className="project__info">
+                <span>{project.name}</span>
+                <div className="project__skills">
+                  {project.languages.map((language, index) => (
+                    <div key={index}>{language}</div>
+                  ))}
                 </div>
               </div>
-            ))}
-          </div>
+              <div
+                className={`project__description ${
+                  projectShowDetail === project.id && 'showDetail'
+                }`}
+              >
+                <div className="project__description-text">
+                  <h4>{project.name}</h4>
+                  <p>{project.details}</p>
+                </div>
+                <div className="project__description-link">
+                  <a href={project.repo} target="_blank" rel="noreferrer">
+                    Visualizar repositório <AiOutlineArrowRight />
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
