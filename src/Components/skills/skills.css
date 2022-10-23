@@ -5,7 +5,6 @@
 
 .skills__content{
   width: 100%;
-  /* max-width: 500px; */
 }
 
 .skills__container-title{
@@ -38,7 +37,7 @@
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
-  margin-bottom: var(--mb-2);
+  margin-bottom: var(--mb-3);
 }
 
 .skill_icon{
@@ -70,6 +69,38 @@
   color: var(--detail-dark); 
   border-color: var(--detail-light);
   opacity: 1;
+}
+
+.skill__container-level{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: var(--mb-3);
+}
+
+.skill__bar{
+  max-width: 250px;
+  width: 100%;
+  background: var(--background-dark);
+  border-radius: 1rem;
+  height: 10px;
+}
+
+#skill__level{
+  position: relative;
+  background: var(--detail);
+  border-radius: 1rem;
+  height: 100%;
+  transition: .3s;
+}
+
+#skill__level::after{
+  position: absolute;
+  content: attr(data-content);
+  top: 12px;
+  right: -5px;
 }
 
 @media (max-width: 992px) {
