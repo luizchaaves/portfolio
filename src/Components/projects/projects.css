@@ -103,6 +103,12 @@
   margin-bottom: .5rem;
 }
 
+.project__container__description-link{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
 .project__description-link a{
   color: #eee;
   display: flex;

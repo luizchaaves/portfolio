@@ -1,11 +1,19 @@
 import React from 'react';
-import { SiHtml5 } from 'react-icons/si';
-import { SiCss3 } from 'react-icons/si';
-import { SiJavascript } from 'react-icons/si';
-import { SiReact } from 'react-icons/si';
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiReact,
+  SiRedux,
+  SiStyledcomponents,
+  SiTypescript,
+  SiNodedotjs,
+  SiPostgresql,
+} from 'react-icons/si';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import Dogs from '../../Assets/projects/dogs.png';
 import Animais from '../../Assets/projects/animais-fantasticos.png';
+import ToDo from '../../Assets/projects/ToDoList.png';
 import './projects.css';
 
 const Projects = () => {
@@ -18,6 +26,7 @@ const Projects = () => {
       languages: [<SiHtml5 />, <SiCss3 />, <SiJavascript />, <SiReact />],
       img: Dogs,
       repo: 'https://github.com/luizchaaves/dogs',
+      site: '',
     },
     {
       id: 2,
@@ -27,6 +36,24 @@ const Projects = () => {
       languages: [<SiHtml5 />, <SiCss3 />, <SiJavascript />],
       img: Animais,
       repo: 'https://github.com/luizchaaves/animais-fantasticos',
+      site: '',
+    },
+    {
+      id: 3,
+      name: 'ToDo List',
+      details:
+        'Projeto desenvolvido com React, Typescript, Redux e Styled Components. Ele permite cadastrar, editar e remover tarefas utilizando uma API em Node.js e um banco de dados Postgresql',
+      languages: [
+        <SiTypescript />,
+        <SiReact />,
+        <SiRedux />,
+        <SiStyledcomponents />,
+        <SiNodedotjs />,
+        <SiPostgresql />,
+      ],
+      img: ToDo,
+      repo: 'https://github.com/luizchaaves/interface-to-do-list',
+      site: 'https://devluiz-todolist.netlify.app/',
     },
   ];
 
@@ -67,10 +94,19 @@ const Projects = () => {
                   <h4>{project.name}</h4>
                   <p>{project.details}</p>
                 </div>
-                <div className="project__description-link">
-                  <a href={project.repo} target="_blank" rel="noreferrer">
-                    Visualizar repositório <AiOutlineArrowRight />
-                  </a>
+                <div className="project__container__description-link">
+                  <div className="project__description-link">
+                    <a href={project.repo} target="_blank" rel="noreferrer">
+                      Visualizar repositório <AiOutlineArrowRight />
+                    </a>
+                  </div>
+                  {project.site && (
+                    <div className="project__description-link">
+                      <a href={project.site} target="_blank" rel="noreferrer">
+                        Visitar site <AiOutlineArrowRight />
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
