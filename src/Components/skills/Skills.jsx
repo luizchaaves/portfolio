@@ -1,8 +1,13 @@
 import React from 'react';
-import { SiHtml5 } from 'react-icons/si';
-import { SiCss3 } from 'react-icons/si';
-import { SiJavascript } from 'react-icons/si';
-import { SiReact } from 'react-icons/si';
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiReact,
+  SiRedux,
+  SiStyledcomponents,
+  SiTypescript,
+} from 'react-icons/si';
 import './skills.css';
 
 const Skills = () => {
@@ -14,7 +19,7 @@ const Skills = () => {
         description:
           'HTML é uma linguagem baseada em marcação, onde marcamos os elementos para definir quais informações a página vai exibir',
         icon: <SiHtml5 />,
-        skill_level: '80%',
+        skill_level: '90%',
       },
       {
         id: 2,
@@ -34,11 +39,32 @@ const Skills = () => {
       },
       {
         id: 4,
+        name: 'TypeScript',
+        description: '',
+        icon: <SiTypescript />,
+        skill_level: '65%',
+      },
+      {
+        id: 5,
         name: 'React',
         description:
           'React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web',
         icon: <SiReact />,
-        skill_level: '65%',
+        skill_level: '75%',
+      },
+      {
+        id: 6,
+        name: 'Redux',
+        description: '',
+        icon: <SiRedux />,
+        skill_level: '60%',
+      },
+      {
+        id: 7,
+        name: 'StyledComponents',
+        description: '',
+        icon: <SiStyledcomponents />,
+        skill_level: '50%',
       },
     ],
     []
@@ -60,6 +86,14 @@ const Skills = () => {
             <h2 className="skills__title">Habilidades</h2>
           </div>
 
+          <div className="skill__container-level">
+            0%
+            <div className="skill__bar">
+              <div className="skill__level" id="skill__level"></div>
+            </div>
+            100%
+          </div>
+
           <div className="skill__content grid">
             <div className="skills__content-icons">
               {skills.map((skill) => (
@@ -78,18 +112,12 @@ const Skills = () => {
               ))}
             </div>
           </div>
-          <div className="skill__container-level">
-            0%
-            <div className="skill__bar">
-              <div className="skill__level" id="skill__level"></div>
-            </div>
-            100%
-          </div>
-          <div>
+
+          {/* <div>
             <div className="skills__content-description" id="divTexto">
               {skills[iconActive - 1].description}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

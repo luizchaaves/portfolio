@@ -38,6 +38,7 @@
   gap: 2rem;
   justify-content: center;
   margin-bottom: var(--mb-3);
+  max-width: 327px;
 }
 
 .skill_icon{
