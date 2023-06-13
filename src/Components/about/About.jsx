@@ -17,7 +17,7 @@ const About = () => {
             <h2 className="about__title">Sobre</h2>
             <div className="about__description">
               <p>
-                Meu nome é <span>Luiz Otávio Chaves Carvalho</span>, tenho 21
+                Meu nome é <span>Luiz Otávio Chaves Carvalho</span>, tenho 22
                 anos.
               </p>
               <br />
