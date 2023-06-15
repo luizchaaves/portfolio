@@ -72,11 +72,11 @@ const Skills = () => {
 
   const [iconActive, setIconActive] = React.useState(skills[0].id);
 
-  React.useEffect(() => {
-    var level_skill = document.getElementById('skill__level');
-    level_skill.style.width = skills[iconActive - 1].skill_level;
-    level_skill.dataset.content = skills[iconActive - 1].skill_level;
-  }, [skills, iconActive]);
+  // React.useEffect(() => {
+  //   var level_skill = document.getElementById('skill__level');
+  //   level_skill.style.width = skills[iconActive - 1].skill_level;
+  //   level_skill.dataset.content = skills[iconActive - 1].skill_level;
+  // }, [skills, iconActive]);
 
   return (
     <section className="section" id="skills">
@@ -86,13 +86,13 @@ const Skills = () => {
             <h2 className="skills__title">Habilidades</h2>
           </div>
 
-          <div className="skill__container-level">
+          {/* <div className="skill__container-level">
             0%
             <div className="skill__bar">
               <div className="skill__level" id="skill__level"></div>
             </div>
             100%
-          </div>
+          </div> */}
 
           <div className="skill__content grid">
             <div className="skills__content-icons">
