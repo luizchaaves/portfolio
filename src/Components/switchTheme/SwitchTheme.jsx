@@ -4,17 +4,37 @@ import { FaSun } from 'react-icons/fa';
 import './switchTheme.css';
 
 const SwitchTheme = () => {
-  const [checked, setChecked] = React.useState(false);
+  const [check, setCheck] = React.useState(false);
 
-  React.useEffect(() => {
-    if (checked) {
+  function changeTheme() {
+    if (!check) {
       document.body.classList.remove('light-theme');
       document.body.classList.add('dark-theme');
+      localStorage.setItem('theme', 'dark');
     } else {
       document.body.classList.remove('dark-theme');
       document.body.classList.add('light-theme');
+      localStorage.setItem('theme', 'light');
     }
-  }, [checked]);
+  }
+
+  React.useEffect(() => {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+      setCheck(true);
+      document.body.classList.remove('light-theme');
+      document.body.classList.add('dark-theme');
+    } else if (theme === 'light') {
+      setCheck(false);
+      document.body.classList.remove('dark-theme');
+      document.body.classList.add('light-theme');
+    } else {
+      setCheck(false);
+      document.body.classList.remove('dark-theme');
+      document.body.classList.add('light-theme');
+      localStorage.setItem('theme', 'light');
+    }
+  }, []);
 
   return (
     <div>
@@ -23,7 +43,11 @@ const SwitchTheme = () => {
         name="checkbox__toggleTheme"
         id="toggleTheme"
         className="toggleTheme__checkbox"
-        onChange={({ target }) => setChecked(target.checked)}
+        checked={check}
+        onChange={({ target }) => {
+          setCheck(target.checked);
+          changeTheme();
+        }}
       />
       <label htmlFor="toggleTheme" className="toggleTheme__label">
         <i className="toggleTheme__icon">
