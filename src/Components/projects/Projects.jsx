@@ -14,6 +14,7 @@ import { AiOutlineArrowRight } from 'react-icons/ai';
 import Dogs from '../../Assets/projects/dogs.png';
 import Animais from '../../Assets/projects/animais-fantasticos.png';
 import ToDo from '../../Assets/projects/ToDoList.png';
+import Pokedex from '../../Assets/projects/pokedex.png';
 import './projects.css';
 
 const Projects = () => {
@@ -54,6 +55,16 @@ const Projects = () => {
       img: ToDo,
       repo: 'https://github.com/luizchaaves/interface-to-do-list',
       site: 'https://devluiz-todolist.netlify.app/',
+    },
+    {
+      id: 4,
+      name: 'Pokédex',
+      details:
+        'A Pokédex é uma aplicação web interativa que exibe uma lista de Pokémon e fornece detalhes sobre cada um deles. Foi desenvolvido com React, TypeScript, Styled-components, React Query e PokeAPI.',
+      languages: [<SiTypescript />, <SiReact />, <SiStyledcomponents />],
+      img: Pokedex,
+      repo: 'https://github.com/luizchaaves/interface-pokedex',
+      site: 'https://devluiz-pokedex.netlify.app/',
     },
   ];
 
