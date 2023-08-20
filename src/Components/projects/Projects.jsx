@@ -1,8 +1,5 @@
 import React from 'react';
 import {
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
   SiReact,
   SiRedux,
   SiStyledcomponents,
@@ -11,36 +8,15 @@ import {
   SiPostgresql,
 } from 'react-icons/si';
 import { AiOutlineArrowRight } from 'react-icons/ai';
-import Dogs from '../../Assets/projects/dogs.png';
-import Animais from '../../Assets/projects/animais-fantasticos.png';
-import ToDo from '../../Assets/projects/ToDoList.png';
+import ToDo from '../../Assets/projects/todo.webp';
 import Pokedex from '../../Assets/projects/pokedex.png';
+import Stone from '../../Assets/projects/stone.webp';
 import './projects.css';
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
-      name: 'Dogs',
-      details:
-        'Projeto, parecido com o Instagram, que simula uma rede social para cachorros. Desenvolvido em HTML, CSS, JavaScript e React.',
-      languages: [<SiHtml5 />, <SiCss3 />, <SiJavascript />, <SiReact />],
-      img: Dogs,
-      repo: 'https://github.com/luizchaaves/dogs',
-      site: '',
-    },
-    {
-      id: 2,
-      name: 'Animais fantásticos',
-      details:
-        'Landing page com diversos efeitos utilizando apenas JavaScript Vanilla. Desenvolvido em HTML, CSS e JavaScript',
-      languages: [<SiHtml5 />, <SiCss3 />, <SiJavascript />],
-      img: Animais,
-      repo: 'https://github.com/luizchaaves/animais-fantasticos',
-      site: '',
-    },
-    {
-      id: 3,
       name: 'ToDo List',
       details:
         'Projeto desenvolvido com React, Typescript, Redux e Styled Components. Ele permite cadastrar, editar e remover tarefas utilizando uma API em Node.js e um banco de dados Postgresql',
@@ -57,7 +33,7 @@ const Projects = () => {
       site: 'https://devluiz-todolist.netlify.app/',
     },
     {
-      id: 4,
+      id: 2,
       name: 'Pokédex',
       details:
         'A Pokédex é uma aplicação web interativa que exibe uma lista de Pokémon e fornece detalhes sobre cada um deles. Foi desenvolvido com React, TypeScript, Styled-components, React Query e PokeAPI.',
@@ -65,6 +41,16 @@ const Projects = () => {
       img: Pokedex,
       repo: 'https://github.com/luizchaaves/interface-pokedex',
       site: 'https://devluiz-pokedex.netlify.app/',
+    },
+    {
+      id: 3,
+      name: 'Stone Challenge',
+      details:
+        'Projeto desenvolvido como parte do desafio proposto pela Stone para criar uma aplicação de conversão de valores de dólar para real. A aplicação utiliza tecnologias modernas como React, React Query, Context API, TypeScript e Styled Components',
+      languages: [<SiTypescript />, <SiReact />, <SiStyledcomponents />],
+      img: Stone,
+      repo: 'https://github.com/luizchaaves/stone-challenge',
+      site: 'https://devluiz-stone.netlify.app/',
     },
   ];
 
