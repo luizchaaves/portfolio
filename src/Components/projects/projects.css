@@ -31,9 +31,14 @@
 .projects__content{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
   flex-wrap: wrap;
   gap: 1rem;
+
+  @media (max-width: 1006px) {
+    justify-content: center;
+  }
+
 }
 
 .project__card{
