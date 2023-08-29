@@ -11,6 +11,7 @@ import { AiOutlineArrowRight } from 'react-icons/ai';
 import ToDo from '../../Assets/projects/todo.webp';
 import Pokedex from '../../Assets/projects/pokedex.png';
 import Stone from '../../Assets/projects/stone.webp';
+import Loteria from '../../Assets/projects/loterias.webp';
 import './projects.css';
 
 const Projects = () => {
@@ -51,6 +52,16 @@ const Projects = () => {
       img: Stone,
       repo: 'https://github.com/luizchaaves/stone-challenge',
       site: 'https://devluiz-stone.netlify.app/',
+    },
+    {
+      id: 4,
+      name: 'Loteria',
+      details:
+        'Projeto inspirado no desafio proposto pela Brainn. O mesmo consiste em uma aplicação front-end que mostra os resultados das loterias, utilizando tecnologias como React, React Query, Context API, TypeScript e Styled Components',
+      languages: [<SiTypescript />, <SiReact />, <SiStyledcomponents />],
+      img: Loteria,
+      repo: 'https://github.com/luizchaaves/interface-lottery',
+      site: 'https://devluiz-loterias.netlify.app/',
     },
   ];
 
